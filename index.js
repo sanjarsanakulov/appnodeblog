@@ -1,4 +1,3 @@
-let PORT = process.env.PORT || 5000;
 const express = require("express");
 const expressEdge = require("express-edge");
 const mongoose = require("mongoose");
@@ -58,6 +57,6 @@ app.post("/auth/log", loginStoreController);
 app.get("/logout", authMiddleware, logoutController);
 app.use((req, res) => res.render("not_found"));
 
-app.listen(PORT, () => {
-    console.log(`Server has been started on Port ${PORT}`);
+app.listen(5000, () => {
+    console.log(`Server has been started on Port 5000`);
 });
